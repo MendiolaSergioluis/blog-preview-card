@@ -1,8 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base{
+@layer base {
     html {
         font-family: "Figtree", sans-serif;
     }
+}
+
+.card {
+    @apply flex h-auto w-96 flex-col gap-6 border p-6 text-left bg-Neutral-White rounded-[20px] shadow-special border-Neutral-Black;
+}
+
+.card__img {
+    @apply w-full object-cover h-[200px] rounded-[10px];
+}
+
+.card__content {
+    @apply space-y-3;
+}
+
+.card__category {
+    @apply rounded px-3 py-1 text-xs Desktop:text-sm font-bold bg-primary;
+}
+
+.card__published-date {
+    @apply text-xs Desktop:text-sm text-Neutral-Grey;
+}
+
+.card__title {
+    @apply cursor-pointer text-xl Desktop:text-2xl font-extrabold transition-colors duration-300 hover:text-primary;
+}
+
+.card__text {
+    @apply text-sm Desktop:text-base leading-relaxed tracking-wide text-Neutral-Grey;
+}
+
+.card__author {
+    @apply flex items-center gap-x-3;
+}
+
+.card__author-name {
+    @apply text-sm font-extrabold;
 }

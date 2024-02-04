@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          content="width=device-width, initial-scale=1.0"
     >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="blog-preview-card practice">
     <!--    Favicon-->
     <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png">
     <!--    styles-->
-    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="css/output.css">
     <!--    Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,27 +18,27 @@
     <!--    Title-->
     <title>Blog Preview Card</title>
 </head>
-<body class="flex min-h-screen w-full items-center justify-center bg-primary p-6 Desktop:p-0">
+<body class="flex min-h-screen w-full items-center justify-center Desktop:p-0 p-6 bg-primary">
 
-<div class="flex h-auto w-96 flex-col gap-6 p-6 bg-Neutral-White rounded-[20px] text-left shadow-special">
-    <img src="img/illustration-article.svg" alt="Illustration article"
-         class="object-cover w-full h-[200px] rounded-[10px]">
-    <main class="space-y-3">
-        <a href="#" class="px-3 py-1 bg-primary font-bold text-xs Desktop:text-sm rounded inline-block">Learning</a>
-        <p class="text-xs Desktop:text-sm">Published 21 Dec 2023</p>
+<article id="card" class="card">
+    <img id="cardImg" src="img/illustration-article.svg" alt="Illustration article"
+         class="card__img" aria-label="Illustration of the article">
+    <main class="card__content">
+        <a id="selectedCategory" href="#" class="card__category" role="button">Learning</a>
+        <p id="publishedDate" class="card__published-date">Published 21 Dec 2023</p>
 
-        <h1 class="font-extrabold text-xl Desktop:text-2xl hover:text-primary cursor-pointer transition-colors duration-300">
+        <h1 id="cardTitle" class="card__title">
             HTML & CSS foundations
         </h1>
-        <p class="text-Neutral-Grey text-sm Desktop:text-base leading-relaxed tracking-wide">
+        <p id="cardText" class="card__text">
             These languages are the backbone of every website, defining structure, content, and presentation.
         </p>
     </main>
-    <div class="flex gap-x-3 items-center">
-        <img src="img/image-avatar.webp" width="32px" height="32px" alt="image avatar">
-        <p class="text-sm font-extrabold">Greg Hooper</p>
+    <div id="authorInfo" class="card__author">
+        <img id="authorImage" src="img/image-avatar.webp" width="32" height="32" alt="image avatar">
+        <p id="authorName" class="card__author-name">Greg Hooper</p>
     </div>
-</div>
+</article>
 
 </body>
 </html>
